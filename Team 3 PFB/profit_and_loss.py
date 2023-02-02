@@ -3,7 +3,7 @@ from pathlib import Path
 import csv
 
 # locate the csv file by creating a file path
-fp = Path.cwd()/"Team 3 PFB"/"Csv_reports"/"profits_and_loss.csv" # for simplicity, use cwd() - current working directory
+fp = Path.cwd()/"Csv_reports"/"profits_and_loss.csv" # for simplicity, use cwd() - current working directory
 
 # creates an empty list to store the profit differences
 differences = []
