@@ -10,15 +10,14 @@ def overheads():
     with path.open(mode = "r", encoding = "UTF-8", newline = "") as file:
         reader = csv.reader(file)
         next(reader)
-#Will compre the percentages in the second row and use the highest percentage. Program will find the corresponding overhead for the percentage
+#Will compare the percentages in the second row and use the highest percentage. Program will find the corresponding overhead for the percentage
         for row in reader:
             if float(row[1]) > float(highest[0][1]):
                 highest[0] = row
 # creates a new text file in the path
-
+#This calls the function
     newpath = Path.cwd()/"Summary_report.txt"
 
     with newpath.open(mode = "a", encoding = "UTF-8") as file:
         file.write(f"[HIGHEST OVERHEADS] {highest[0][0]}: {highest[0][1]}%\n")
-#This calls the function
 overheads()
