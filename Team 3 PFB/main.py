@@ -1,10 +1,10 @@
-import profit_loss, overheads, cash_on_hand
+import profit_and_loss, overheads, cash_on_hands
 
-coh = cash_on_hand.cashOnHand()
+coh = cash_on_hands.cashOnHand()
 print(coh)
 overheads = overheads.overheads()
 print(overheads)
-pL = profit_loss.profitLoss()
+pL = profit_and_loss.profitLoss()
 print(pL)
 
 #------------- THIS IS TO ILLUSTRATE THE AUTOMATION OBJECTIVES AND EXPECTED OUTPUT IN A TEXT FILE --------- #
