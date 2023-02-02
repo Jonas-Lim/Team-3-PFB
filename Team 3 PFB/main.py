@@ -1,6 +1,6 @@
-import profit_and_loss, overheads, cash_on_hands
+import profit_and_loss, overheads, cash_on_hand
 
-coh = cash_on_hands.cashOnHand()
+coh = cash_on_hand.cashOnHand()
 print(coh)
 overheads = overheads.overheads()
 print(overheads)
