@@ -3,7 +3,7 @@ import csv
 def overheads():
     highest = [[0, 0]]
     
-    path = Path.cwd()/"Team 3 PFB"/"Csv_reports"/"Overheads_day_90.csv"
+    path = Path.cwd()/"Csv_reports"/"Overheads_day_90.csv"
 
     with path.open(mode = "r", encoding = "UTF-8", newline = "") as file:
         reader = csv.reader(file)
