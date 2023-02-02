@@ -3,7 +3,7 @@ from pathlib import Path
 import csv
 
 # create a file to csv file
-fp = Path.cwd()/"business-intelligence.csv"
+fp = Path.cwd()/"Csv_reports"/"business-intelligence.csv"
 
 # create an empty list to store values
 differences = []
