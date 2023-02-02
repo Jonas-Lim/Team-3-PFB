@@ -8,7 +8,7 @@ pL = profit_and_loss.profitLoss()
 print(pL)
 
 #------------- THIS IS TO ILLUSTRATE THE AUTOMATION OBJECTIVES AND EXPECTED OUTPUT IN A TEXT FILE --------- #
-f= open("summary_report.txt","w+")
+f= open("Summary_report.txt","w+")
 
 #------------ TO FIND OVERHEADS -------- #
 # use f string
