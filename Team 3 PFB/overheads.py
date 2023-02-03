@@ -1,23 +1,23 @@
-# import path from pathlib and csv module
 from pathlib import Path
-import csv
+from csv import reader
+
 def overheads():
-    """The function eveluates what is the highest overhead expanse """
-    highest = [[0, 0]]
-    
-    path = Path.cwd()/"Csv_reports"/"Overheads_day_90.csv"
+    with open('Overheads.csv', 'r') as read_obj:
+        csv_reader = reader(read_obj)
+        header = next(csv_reader)
+        category = []
+        overheads = []
+        for i in csv_reader:
+            category.append(i[0])
+            overheads.append(float(i[1]))
 
-    with path.open(mode = "r", encoding = "UTF-8", newline = "") as file:
-        reader = csv.reader(file)
-        next(reader)
-#Will compare the percentages in the second row and use the highest percentage. Program will find the corresponding overhead for the percentage
-        for row in reader:
-            if float(row[1]) > float(highest[0][1]):
-                highest[0] = row
-# creates a new text file in the path
-#This calls the function
-    newpath = Path.cwd()/"Summary_report.txt"
+        highest = max(overheads)
+        h = 0
+        for k in range(len(overheads)):
+            if overheads[k] == highest:
+                h = k
+        highestCat = [category[h], highest]
 
-    with newpath.open(mode = "a", encoding = "UTF-8") as file:
-        file.write(f"[HIGHEST OVERHEADS] {highest[0][0]}: {highest[0][1]}%\n")
-overheads()
+    return highestCat
+
+            
